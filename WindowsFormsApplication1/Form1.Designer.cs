@@ -62,12 +62,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tbMaskA = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label15 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 61);
+            this.textBox1.Location = new System.Drawing.Point(13, 62);
             this.textBox1.MaxLength = 3;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(55, 20);
@@ -96,7 +98,7 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(90, 60);
+            this.textBox2.Location = new System.Drawing.Point(91, 62);
             this.textBox2.MaxLength = 3;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(55, 20);
@@ -116,7 +118,7 @@
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(168, 59);
+            this.textBox3.Location = new System.Drawing.Point(168, 62);
             this.textBox3.MaxLength = 3;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(55, 20);
@@ -126,7 +128,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(246, 60);
+            this.textBox4.Location = new System.Drawing.Point(251, 62);
             this.textBox4.MaxLength = 3;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
@@ -186,7 +188,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(330, 60);
+            this.textBox5.Location = new System.Drawing.Point(333, 63);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(55, 20);
@@ -224,7 +226,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(413, 65);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(420, 144);
+            this.richTextBox1.Size = new System.Drawing.Size(416, 148);
             this.richTextBox1.TabIndex = 14;
             this.richTextBox1.Text = "";
             // 
@@ -261,7 +263,7 @@
             this.richTextBox2.Location = new System.Drawing.Point(413, 259);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(430, 130);
+            this.richTextBox2.Size = new System.Drawing.Size(434, 130);
             this.richTextBox2.TabIndex = 23;
             this.richTextBox2.Text = "";
             // 
@@ -294,7 +296,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(330, 270);
+            this.textBox6.Location = new System.Drawing.Point(330, 271);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(55, 20);
@@ -303,7 +305,7 @@
             // tbMaskD
             // 
             this.tbMaskD.Enabled = false;
-            this.tbMaskD.Location = new System.Drawing.Point(246, 270);
+            this.tbMaskD.Location = new System.Drawing.Point(251, 271);
             this.tbMaskD.MaxLength = 3;
             this.tbMaskD.Name = "tbMaskD";
             this.tbMaskD.Size = new System.Drawing.Size(55, 20);
@@ -323,7 +325,7 @@
             // tbMaskC
             // 
             this.tbMaskC.Enabled = false;
-            this.tbMaskC.Location = new System.Drawing.Point(168, 269);
+            this.tbMaskC.Location = new System.Drawing.Point(169, 271);
             this.tbMaskC.MaxLength = 3;
             this.tbMaskC.Name = "tbMaskC";
             this.tbMaskC.Size = new System.Drawing.Size(55, 20);
@@ -343,7 +345,7 @@
             // tbMaskB
             // 
             this.tbMaskB.Enabled = false;
-            this.tbMaskB.Location = new System.Drawing.Point(90, 270);
+            this.tbMaskB.Location = new System.Drawing.Point(90, 271);
             this.tbMaskB.MaxLength = 3;
             this.tbMaskB.Name = "tbMaskB";
             this.tbMaskB.Size = new System.Drawing.Size(55, 20);
@@ -381,11 +383,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 244);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(167, 13);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "Type subnet address to get mask:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 534);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox6);
@@ -462,6 +478,8 @@
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox tbMaskA;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label15;
     }
 }
 

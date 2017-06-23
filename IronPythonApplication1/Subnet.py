@@ -20,17 +20,20 @@ def fToDo(sender,e):
         podmreze = ip.subNet(ip, netNum, netNumExtend, subnets)
         for i in range(0, subnets):
             if netNum == 24:
-                rez[3] = str(int(podmreze[i], 2))
-                frm.richTextBox1.Text += str(i + 1) + ". " + str(rez) + "\n"
+                rez[3] = str(int(podmreze[subnets-1-i], 2))
+                rez[3]=int(rez[3])
+                frm.richTextBox1.Text += str(i + 1) + ". " + str(rez[0])+"."+str(rez[1])+"." +str(rez[2])+"."+str(rez[3]) + "\n"
             if netNum == 16:
-                rez[3] = str(int(podmreze[i][8:], 2))
-                rez[2] = str(int(podmreze[i][:8], 2))
-                frm.richTextBox1.Text += str(i + 1) + "." + str(rez) + "\n"
+                rez[3] = str(int(podmreze[subnets-1-i][8:], 2))
+                rez[3]=int(rez[3])
+                rez[2] = str(int(podmreze[subnets-1-i][:8], 2))
+                frm.richTextBox1.Text += str(i + 1) + ". " + str(rez[0])+"."+str(rez[1])+"." +str(rez[2])+"."+str(rez[3]) + "\n"
             if netNum == 8:
-                rez[3] = str(int(podmreze[i][16:], 2))
-                rez[2] = str(int(podmreze[i][8:16], 2))
-                rez[1] = str(int(podmreze[i][:8], 2))
-                frm.richTextBox1.Text += str(i + 1) + "." + str(rez) + "\n"
+                rez[3] = str(int(podmreze[subnets-1-i][16:], 2))
+                rez[3]=int(rez[3])
+                rez[2] = str(int(podmreze[subnets-1-i][8:16], 2))
+                rez[1] = str(int(podmreze[subnets-1-i][:8], 2))
+                frm.richTextBox1.Text += str(i + 1) + ". " + str(rez[0])+"."+str(rez[1])+"." +str(rez[2])+"."+str(rez[3]) + "\n"
 def get(frm):
     newToolStrip = ToolStripMenuItem(Text = 'Subnet', Name = 'fToDo', Size = Size(104, 20))
     newToolStrip.Tag = frm
