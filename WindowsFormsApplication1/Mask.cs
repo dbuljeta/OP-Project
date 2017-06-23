@@ -16,22 +16,6 @@ namespace WindowsFormsApplication1
             this.c = c;
             this.d = d;
         }
-        public string getMaskA()
-        {
-            return a;
-        }
-        public string getMaskB()
-        {
-            return b;
-        }
-        public string getMaskC()
-        {
-            return c;
-        }
-        public string getMaskD()
-        {
-            return d;
-        }
         public string getMask(Mask maska, int netNum, int subnets)
         {
             maska.a = "11111111";
