@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
         int a, b, nPart;
         ScriptEngine m_pyEngine = null;
         ScriptScope m_pyScope = null;
-        ScriptSource text_Source = null;
+        ScriptSource m_Source = null;
         public Form1()
         {
             InitializeComponent();
@@ -132,12 +132,12 @@ namespace WindowsFormsApplication1
             {
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
                 openFileDialog1.ShowDialog();
-                text_Source = m_pyEngine.CreateScriptSourceFromFile(openFileDialog1.FileName);
-                text_Source.Execute(m_pyScope);
+                m_Source = m_pyEngine.CreateScriptSourceFromFile(openFileDialog1.FileName);
+                m_Source.Execute(m_pyScope);
                 dynamic open = m_pyScope.GetVariable("get");
                 open(this);
             }
-            else MessageBox.Show("You don't selected any number of subnets");
+            else MessageBox.Show("You haven't selected any number of subnets");
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -266,7 +266,7 @@ namespace WindowsFormsApplication1
 
         private void tbMaskD_TextChanged(object sender, EventArgs e)
         {
-            if (tbMaskC.TextLength != 0)
+            if (tbMaskD.TextLength != 0)
             {
                 int maskD;
                 maskD = Convert.ToInt32(tbMaskD.Text);
