@@ -225,7 +225,7 @@ namespace WindowsFormsApplication1
             {
                 int maskB;
                 maskB = Convert.ToInt32(tbMaskB.Text);
-                if (maskB > 224)
+                if (maskB > 255)
                 {
                     MessageBox.Show("Please enter a number in range [0,255]");
                 }
@@ -248,7 +248,7 @@ namespace WindowsFormsApplication1
             {
                 int maskC;
                 maskC = Convert.ToInt32(tbMaskC.Text);
-                if (maskC > 224)
+                if (maskC > 255)
                 {
                     MessageBox.Show("Please enter a number in range [0,255]");
                 }
@@ -270,7 +270,7 @@ namespace WindowsFormsApplication1
             {
                 int maskD;
                 maskD = Convert.ToInt32(tbMaskD.Text);
-                if (maskD > 224)
+                if (maskD > 255)
                 {
                     MessageBox.Show("Please enter a number in range [0,255]");
                 }

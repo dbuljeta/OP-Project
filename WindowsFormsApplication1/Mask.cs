@@ -37,6 +37,9 @@ namespace WindowsFormsApplication1
                         test++;
                     }
                     maska.b = sb.ToString();
+                    maska.c = "00000000";
+                    maska.d = "00000000";
+
                 }
                 if (subnets > 8 && subnets <= 16)
                 {
@@ -72,6 +75,7 @@ namespace WindowsFormsApplication1
                         test++;
                     }
                     maska.c = sb.ToString();
+                    maska.d = "00000000";
                 }
                 if (subnets > 8 && subnets <= 16)
                 {
